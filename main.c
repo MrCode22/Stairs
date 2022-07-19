@@ -6,25 +6,13 @@
 int main()
 {
 
-    printf("Hello!\n");
+    printf("Hello!\n");// say hello and init var
     int numSteps;
 
-    printf("How many steps do you want to climb?\n");
+    printf("How many steps do you want to climb?\n"); //query user so as to pass numSteps to stairs function
     scanf(" %d", &numSteps);
 
-    stairs(numSteps);
+    stairs(numSteps); //call stairs.c and pass numSteps
 
     return 0;
-
-    // char line[300];
-    // FILE * fpointer = fopen("employees.txt", "r");
-
-
-    // for (int i = 0; i <= 4; i++){
-    // fgets(line, 300, fpointer);
-    // printf("%s",line);
-    // }
-
-    // return 0;
-
 }
