@@ -14,16 +14,16 @@ int stairs(int numSteps){
     printf("Which direction do you want the stairs to be?\n");
     scanf("%s", dir);
 
-    char left[10] = "left";
+    char left[10] = "left"; // created chars to check user input
     char right[10] = "right";
     char real[10] = "real";
 
-    int resultLeft = strcmp(dir,left);
+    int resultLeft = strcmp(dir,left); // compares user input to the various 
     int resultRight = strcmp(dir,right);
     int resultReal = strcmp(dir,real);
     int k;
 
-    if (resultLeft == 0){
+    if (resultRight == 0){ //checks if user asks for staircase facing right
 
     for (int row = 0; row < numSteps; row++){
             printf("\n");
@@ -33,7 +33,7 @@ int stairs(int numSteps){
                 }
         }
     }
-    }else if (resultRight == 0){
+    }else if (resultLeft == 0){ //checks if user asks for staircase facing left
 
     for (int row = 0; row < numSteps; row++){
             printf("\n");
@@ -45,7 +45,7 @@ int stairs(int numSteps){
                     }
         }
     }}
-    else if (resultReal == 0){
+    else if (resultReal == 0){ //checks if user asks for staircase that looks like real stairs
         for (int row = 0; row <= numSteps; row++){
             if (row % 2 != 0){
                 k = row + 1;}
@@ -57,6 +57,7 @@ int stairs(int numSteps){
         }
 
     }else{
+	    // error message
         printf("\nYou didn't give a correct num/direction!");
     }
 
@@ -66,7 +67,7 @@ int stairs(int numSteps){
 }
 
 int randomNumber(){
-
+	//builds actual chars of staircase of random numbers
     int randNum = rand() % 10;
     return randNum; // assigns a random num 1-9
 }
